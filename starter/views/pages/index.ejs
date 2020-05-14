@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="main.js"></script>
+    <title>Assignment 3</title>
+</head>
+<body>
+  <p>Enter the todo item you want to modify, and the new name you want to give it.</p>
+  <input type="text" id="item-given" cols="18" rows="2">
+  <input type="text" id="item-update-or-delete" cols="18" rows="2">
+  <button type="button" id="update-button">Update</button>
+  <button type="button" id="delete-button">Delete</button>
+  <div id="message"></div>
+    <form action="/todoitems" method="POST">
+        <fieldset class="todo-list">
+          <legend class="todo-list__title">My Special Todo List</legend>
+          <label class="todo-list__label">
+            <input type="checkbox" name="" id="" />
+            <i class="check"></i>
+            <span>Work on CST Project</span>
+          </label>
+          <label class="todo-list__label">
+            <input type="checkbox" name="" id="" />
+            <i class="check"></i>
+            <span>Watch CST Lectures</span>
+          </label>
+          <label class="todo-list__label">
+            <input type="checkbox" name="" id="" />
+            <i class="check"></i>
+            <span>Cook Dinner</span>
+          </label>
+          <label class="todo-list__label">
+            <input type="checkbox" name="" id="" />
+            <i class="check"></i>
+            <span>Code All Night</span>
+          </label>
+        </fieldset>
+      </form>
+      
+</body>
+</html>

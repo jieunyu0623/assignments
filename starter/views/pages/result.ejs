@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Assignment 3</title>
+</head>
+<body>
+  <p style="text-align: center; display: inline-block; color: black;">Enter the todo item you want to modify, and the new name you want to give it.</p></br>
+  <input type="text" id="item-given" cols="18" rows="2"></br>
+  <input type="text" id="item-update-or-delete" cols="18" rows="2"></br>
+  <button type="button" id="update-button">Update</button></br>
+  <button type="button" id="delete-button">Delete</button></br>
+  <div id="message"></div></br>
+  <form action="/todoitems" action="POST">
+    <fieldset class="items todo-list">
+      <legend class="todo-list__title">My Special Todo List</legend>
+      <% for(var i = 0; i < items.length; i++) {%>
+      <label class="item todo-list__label">
+        <input type="checkbox"/>
+        <i class="check"></i>
+        <span><%= items[i].items %></span>
+      </label>
+      <% } %>
+    </fieldset>
+  </form>
+      
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "workshop7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "ajax": "0.0.4",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "mongodb": "^3.5.7",
+    "node": "^14.2.0",
+    "nodemon": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

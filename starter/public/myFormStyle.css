@@ -1,0 +1,45 @@
+h1 {
+    grid-area: itemNumber;
+    color: white;
+    font-family: monospace;
+    margin-left: 10px;
+    display: inline;
+}
+
+input {
+    background-color: #DEFDE0; 
+    border-radius: 5px; 
+    border: 1px solid; 
+    outline: none; 
+    overflow: auto;
+    grid-area: textarea;
+    margin-top: 20px;
+    width: 150px;
+    margin-left: 5px;
+}
+
+button {
+    grid-area: plus;
+    padding: 7px;
+    width: 35px;
+    border: 1px solid;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 22px;
+    margin-left: 5px;
+}
+
+#submit {
+    background-color: #F0DEFD; 
+    border-radius: 5px; 
+    border: 1px solid; 
+    position: static;
+    grid-area: send;
+    padding: 7px;
+    width: 60px;
+}
+
+body {
+    background-color: black;
+
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="myFormStyle.css">
+    <title>My Form</title>
+</head>
+<body>
+<!-- Create your form here -->
+<div class="container">
+    <br/>
+    <br/>
+    <div class="form-group">
+        <form method="post">
+            <div class="table table-bordered" id="item_field">
+                    <h1>Todo Item 1</h1>
+                    <input type="text" id="item1" class="task" cols="22" rows="2">
+                    <button type="button" id="add" class="addButton">+</button></td>
+            </div>
+            <input type="submit" id="submit" value="Submit"/>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    $(document).ready(function() {
+        var count = 1;
+        //var $itemIds = Array.from($('h1 + .task'));
+        //var ids = $itemIds.map(task => $(task).attr('id'));
+        $('#add').on('click', function() {
+            count++;
+            $('#item_field').append('</br><h1>Todo Item ' + count +'</h1><input type="text" id="item'+ count +'" class="task" cols="22" rows="2">');
+            $('#add').insertAfter('#item' + count);
+        }); 
+        $('#submit').on('click', function() {
+            var items = [];
+            for (let i = 1; i <= count; i++) {
+                items.push($('#item' + i).val());
+            }
+        $.ajax({
+            method: 'POST',
+            contentType: 'application/json',
+            url:'/myForm',
+            type: 'POST',
+            data: JSON.stringify({
+                items: items
+            })
+        }).
+        done(function(data) {
+        console.log(data);
+        }).
+        fail(function(error) {
+        console.log(error);
+        })
+        })       
+    });
+
+
+
+</script>
